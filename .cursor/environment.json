@@ -1,0 +1,13 @@
+{
+    "name": "Salesforce Complete App",
+    "install": "npm install",
+    "start": "docker compose up -d db redis",
+    "terminals": [
+      { "name": "frontend", "command": "npm run dev", "description": "Next.js dev server" },
+      { "name": "backend", "command": "npm run start:server", "description": "Express API" }
+    ],
+    "ports": [
+      { "port": 3000, "name": "frontend" },
+      { "port": 4000, "name": "backend api" }
+    ]
+  }
